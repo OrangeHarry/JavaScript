@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>string tag</title>
+</head>
+
+<body>
+    <script>
+        // 문자형 변수에 태그를 담아서 웹문서에 추가할 수 있다.
+        var tag = "";
+        tag += "<table border='1'>";
+        tag += "    <tr>";
+        tag += "    <td>a</td>";
+        tag += "    </tr>";
+        tag += "</table>";
+        document.write(tag);
+
+        var a = Number.parseInt("600");
+        document.write(a+a);
+
+        var b = Boolean(0); //false 0을 제외한 나머지 값들은 true를 리턴
+    </script>
+</body>
+
+</html>
