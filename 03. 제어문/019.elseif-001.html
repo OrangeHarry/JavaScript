@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>elseIf</title>
+</head>
+
+<body>
+    <script>
+        var mon = prompt("현재는 몇 월입니까?", "0");
+        if (mon >= 9 && mon <= 11) {
+            document.write("코트의 계절 가을이네요!!");
+        } else if (mon >= 6 && mon <= 8) {
+            document.write("시원한 바닷가로 떠나고픈 여름이네요 :)");
+        } else if (mon >= 3 && mon <= 5) {
+            document.write("따뜻하고 산뜻한 봄이군요!!");
+        } else if (mon >= 1 && mon <= 2 || mon == 12) {
+            document.write("하얀 눈이 소복히 쌓이는 겨울이에요:)");
+        } else {//(mon < 1 || mon > 12)
+            alert("1~12까지의 숫자를 입력해주세요.");
+
+            //현재 창 새로고침 메소드
+            location.reload();
+        }
+    </script>
+</body>
+
+</html>

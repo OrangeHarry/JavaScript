@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>조건문</title>
+</head>
+<body>
+    <script>
+        var walkAmount = prompt("하루 걷는 걸음 수 : ", "0");
+       
+        //조건문에 포함할 수 있는 형식은 논리식, 변수 값이 가능하며 변수 값은(0, "", null, undefined) ==> false), 나머지는 true값을 갖는다
+        if(walkAmount >= 10000){
+            document.write("매우 좋은 습관을 가지고 계시는군요!!", "<br>");
+        }else{
+            document.write("운종좀 하셔야 겠네요 :)","<br>");
+        }
+
+        //if else문 삼항연산자로 변환
+        var result = walkAmount >= 10000 ? "매우 좋은 습관을 가지고 계시는군요!!<br>" : "운종좀 하셔야 겠네요 :)<br>";
+        document.write(result, "<br");
+
+        var num = 3;
+        if(num){
+            document.write(num, "br"); 
+        }
+        document.write("=============The End==============");
+    </script>
+</body>
+</html>
