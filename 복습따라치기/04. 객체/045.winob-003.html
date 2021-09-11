@@ -5,21 +5,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>setTimeOut</title>
+    <title>setTimeout</title>
 </head>
 
 <body>
     <script>
         var addNum = 0;
-        //3초 후에 한 번만 실행되고 멈춤
+        //3초 후에 한번만 실행되고 멈춤
         var auto = setTimeout(function () {
-            addNum++
+            addNum++;
             console.log(addNum);
         }, 3000);
 
         var auto2;
         var addNum2 = 0;
-        //재귀함수를 이용해 setInterval과 같이 사용가능 //재귀함수 : 자기 자신을 포함하는 것
         function autoFnc() {
             if (auto2 != null && auto2 != '') {
                 //auto2에 setTimeout이 담겨있으면 초기화
@@ -28,7 +27,7 @@
             addNum2++;
             console.log(addNum2);
             auto2 = setTimeout(function () {
-                autoFnc();
+                autoFnc
             }, 3000);
         }
         autoFnc

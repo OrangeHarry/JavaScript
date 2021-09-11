@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object</title>
+</head>
+
+<body>
+    <script>
+        //ES6 객체 생성 방식 class로 객체 선언하고 호출이 따로 가능하다(자바랑 동일)
+        class tv {
+            constructor(color, price) {
+                this.color = color;
+                this.price = price;
+            }
+            info() {
+                document.write("tv 색상 : " + this.color, "<br>");
+                document.write("tv 가격 : " + this.price, "<br>");
+            }
+        }
+        var tv2 = new tv("red", 600000);
+        tv2.info();
+    </script>
+</body>
+
+</html>

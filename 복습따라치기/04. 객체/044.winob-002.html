@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setInterval</title>
+</head>
+
+<body>
+    <button onclick="clearInterval(auto_1);">증가 정지</button>
+    <button onclick="clearInterval(auto_2);">감소 정지</button>
+    <script>
+        var addNum = 0;
+        var subNum = 1000;
+        //setInterval은 무조건 변수에 담아서 활용하자!! //일정 시간 간격으로 반복실행
+        var auto_1 = setInterval(function () {
+            addNum++;
+            console.log("addNum : " + addNum);
+        }, 2000); //밀리세크 단위로 표시(2초)
+
+        var auto_2 = setInterval(function () {
+            subNum--;
+            console.log("subNum : " + subNum);
+        }, 2000);
+    </script>
+</body>
+
+</html>

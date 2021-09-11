@@ -1,6 +1,7 @@
 <!DOCTYPE HTML>
 
 <html>
+
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title></title>
@@ -14,16 +15,28 @@
          - window.prompt()를 이용해 값을 입력받을 때 입력받는 횟수가 출력되어야 합니다.
          - 입력 값이 end면 alert()을 이용해 “입력이 종료되었습니다.” 메시지를 띄운 후 프로그램을 종료해 주세요.
          - end가 아닌 경우 입력받은 값의 합을 document.write()를 이용해 화면에 출력해 주세요.
-
-
          */
-
-
-
+        var arr = [];
+        var cnt = 0;
+        var sum = 0;
+        var value = 0 ;
+        while (true) {
+            value = window.prompt("값을 입력해 주세요, end를 입력하시면 종료 됩니다.", 0);
+            if(value == "end" || value == "END" || value == null){
+                alert("입력이 종료되었습니다."); 
+                break;
+            }
+            cnt++;
+            sum += parseInt(value);
+            document.write(cnt + "번째 입력값 : " + value, "<br>");
+        }
+        document.write("입력된 값의 합 : " + sum, "<br>");
     </script>
 
 </head>
+
 <body>
 
 </body>
+
 </html>
