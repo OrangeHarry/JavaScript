@@ -1,12 +1,29 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>연습문제 2</title>
 </head>
+
 <body>
-	
+	<script>
+		function compareTwoNum() {
+			var firstNum = Number(prompt("비교할 첫번째 숫자", "0"));
+			var secondNum = Number(prompt("비교할 두번째 숫자", "0"));
+
+			if (firstNum > secondNum) {
+				return alert(firstNum + "(이)가 " + secondNum + "보다 큽니다.");
+			} else if (firstNum < secondNum) {
+				return alert(firstNum + "(이)가 " + secondNum + "보다 작습니다.");
+			} else {
+				return alert(firstNum + ", " + secondNum + " 두 숫자는 같습니다.");
+			}
+		}
+		compareTwoNum();
+	</script>
 </body>
+
 </html>

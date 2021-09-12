@@ -7,6 +7,31 @@
 	<title>연습문제 1</title>
 </head>
 <body>
+	<script>
+		function sumMulty(firstNum, secondNum){
+			this.a = firstNum;
+			this.b = secondNum;
+
+			this.cucl = function (){
+				a = prompt("첫번째 숫자를 입력하세요","0");
+				b = prompt("두번째 숫자를 입력하세요", "0");
+				if(a==b){
+					document.write(a*b);
+					return a*b;
+				}else{
+					document.write(a+b);
+					return a+b;
+				}
+			}
+		}
+		var test1 = new sumMulty(5,10);
+		var test2 = new sumMulty(10,10);
+
+		console.log(test1);
+		console.log(test2);
+		sumMulty.console();
+	
+	</script>
 
 </body>
 </html>

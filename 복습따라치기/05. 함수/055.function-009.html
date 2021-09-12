@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>프로토타입</title>
+</head>
+
+<body>
+    <script>
+        function CheckWeight(name, weight, height) {
+            this.userName = name;
+            this.userWeight = weight;
+            this.userHeight = height;
+            this.minWeight;
+            this.MaxWeight;
+
+            //아예 CheckWeight의 프로토타입에 메소드를 추가
+            CheckWeight.prototype.getInfo = function () {
+                var str = "";
+                str += "이름 : " + this.userName + ", ";
+                str += "몸무게 : " + this.userWeight + ", ";
+                str += "신장 : " + this.userHeight;
+                return str;
+            }
+
+            CheckWeight.prototype.getResult = function () {
+                this.minWeight = (this.userHeight - 100) * 0.9 - 5;
+                this.MaxWeight = (this.userHeight - 100) * 0.9 + 5;
+
+                if (this.userWeight >= this.minWeight && this.userWeight <= this.MaxWeight) {
+                    return "정상몸무게 입니다.";
+                } else if (this.userWeight < this.minWeight) {
+                    return "저체중입니다.";
+                } else {
+                    return "비만입니다. 운동좀 하자~";
+                }
+            }
+        }
+        var harry = new CheckWeight("하헌민", 70, 175);
+        var becky = new CheckWeight("김지수", 50, 167);
+        console.log(harry);
+        console.log(becky);
+
+        document.write(harry.getInfo());
+        document.write(harry.getResult(), "<br>");
+        document.write(becky.getInfo());
+        document.write(becky.getResult(), "<br>");
+
+        //프로토타입의 메소드 호출 -> 객체마다 메소드 호출할 필요가 없어져서 메모리가 절약된다.
+        document.write(harry.getResult === becky.getResult); //값이 true라는 것은 두 객체가 같은 함수를 사용하고 있다는 의미이다.
+
+    </script>
+</body>
+
+</html>

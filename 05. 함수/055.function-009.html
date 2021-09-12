@@ -10,7 +10,7 @@
 
 <body>
     <script>
-        function checkWeight(name, weight, height) {
+        function CheckWeight(name, weight, height) {
             //this는 checkWeight라는 객체를 가르킴
             this.userName = name;;
             this.userWeight = weight;
@@ -19,7 +19,7 @@
             this.maxWeight;
 
             //checkWeight의 프로토타입에 메소드 추가
-            checkWeight.prototype.getInfo = function () {
+            CheckWeight.prototype.getInfo = function () {
                 var str = "";
                 str += "이름 : " + this.userName + ", ";
                 str += "몸무게 : " + this.userWeight + ", ";
@@ -27,7 +27,7 @@
                 return str;
             }
 
-            checkWeight.prototype.getResult = function () {
+            CheckWeight.prototype.getResult = function () {
                 this.minWeight = (this.userHeight - 100) * 0.9 - 5;
                 this.maxWeight = (this.userHeight - 100) * 0.9 + 5;
 
@@ -41,9 +41,9 @@
             }
         }
 
-        //checkWeight 객체 생성
-        var jang = new checkWeight("장보리", 62, 168); //프로토 타입 안에 있는 애들인가 checkWeight는??
-        var harry = new checkWeight("하헌민", 70, 175)
+        //CheckWeight 객체 생성
+        var jang = new CheckWeight("장보리", 62, 168); //프로토 타입 안에 있는 애들인가 checkWeight는??
+        var harry = new CheckWeight("하헌민", 70, 175)
         console.log(jang);
         console.log(harry);
 
@@ -51,7 +51,7 @@
         document.write(jang.getResult(), "<br>");
 
         //프로토타입의 메소드 호출 -> 객체마다 메소드 호출할 필요가 없어져서 메모리가 절약된다(중복코드도 피할 수 있겠지?)
-        document.write(jang.getResult === harry.getResult);
+        document.write(jang.getResult === harry.getResult); //값이 true라는 것은 두 객체가 같은 함수를 사용하고 있다는 의미이다.
     </script>
 </body>
 

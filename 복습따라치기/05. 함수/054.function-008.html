@@ -10,13 +10,14 @@
 
 <body>
     <script>
-        function CheckWeight(name, weight, height) { //가능하면 객체 생성자 함수는 대문자로!!
+        function CheckWeight(name, weight, height) {
             this.userName = name;
             this.userWeight = weight;
             this.userHeight = height;
             this.minWeight;
-            this.maxWeight;
+            this.MaxWeight;
 
+            //생성한 객체에 각 속성값을 출력하는 함수
             this.getInfo = function () {
                 var str = "";
                 str += "이름 : " + this.userName + ", ";
@@ -24,29 +25,31 @@
                 str += "신장 : " + this.userHeight;
                 return str;
             }
+            //몸무게가 정상인지 출력하는 함수
             this.getResult = function () {
                 this.minWeight = (this.userHeight - 100) * 0.9 - 5;
-                this.maxWeight = (this.userHeight - 100) * 0.9 + 5;
+                this.MaxWeight = (this.userHeight - 100) * 0.9 + 5;
 
-                if (this.userWeight >= this.minWeight && this.userWeight <= this.maxWeight) {
-                    return "정상 몸무게 입니다.";
+                if (this.userWeight >= this.minWeight && this.userWeight <= this.MaxWeight) {
+                    return "정상몸무게 입니다.";
                 } else if (this.userWeight < this.minWeight) {
-                    return "저체중 입니다.";
+                    return "저체중입니다.";
                 } else {
-                    return "비만 입니다.";
+                    return "비만입니다. 운동좀 하자~";
                 }
             }
         }
-
-        var jang = new CheckWeight("장보리", 62, 168);
-        var harry = new CheckWeight("하헌민", 70, 175)
-        console.log(jang);
+        var harry = new CheckWeight("하헌민", 70, 175);
+        var becky = new CheckWeight("김지수", 50, 167);
         console.log(harry);
+        console.log(becky);
 
-        document.write(jang.getInfo());
-        document.write(jang.getResult(), "<br>");
-        // document.write(harry.getInfo());
-        // document.write(harry.getResult());
+        document.write(harry.getInfo());
+        document.write(harry.getResult(), "<br>");
+        document.write(becky.getInfo());
+        document.write(becky.getResult(), "<br>");
+
+
     </script>
 </body>
 
