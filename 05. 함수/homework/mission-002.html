@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연습문제2</title>
+</head>
+
+<body>
+    <script>
+        function TestScore(name, kor, eng) {
+            this.userName = name;
+            this.korNum = kor;
+            this.engNum = eng;
+
+            this.getTestInfo = function () {
+                document.write("이름 : " + this.userName, "<br>");
+                document.write("국어 : " + this.korNum, "<br>");
+                document.write("영어 : " + this.engNum, "<br>");
+            }
+            this.getAvg = function () {
+                return (this.korNum + this.engNum) / 2;
+            }
+        }
+
+        var kim = new TestScore("김씨", 80, 90);
+        var park = new TestScore("박씨", 100, 80);
+
+        kim.getTestInfo();
+        document.write("평균점수 : " + kim.getAvg(), "<br><br>");
+
+        park.getTestInfo();
+        document.write("평균점수 : " + park.getAvg(), "<br><br>");
+    </script>
+</body>
+
+</html>
